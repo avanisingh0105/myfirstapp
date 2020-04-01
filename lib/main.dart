@@ -1,35 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/pages/homePage.dart';
 
 void main() => runApp(PokeAPI());
 
 class PokeAPI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return CupertinoApp(
       debugShowCheckedModeBanner: false,
       title: 'Poke API',
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
+      theme: CupertinoThemeData(
+        primaryColor: Colors.pink,
       ),
       home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'https://jsonplaceholder.typicode.com/users',
-        ),
-      ),
     );
   }
 }
