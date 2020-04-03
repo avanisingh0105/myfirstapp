@@ -2,16 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/pages/homePage.dart';
 
-void main() => runApp(PokeAPI());
+void main() => runApp(PokemonAPI());
 
-class PokeAPI extends StatelessWidget {
+class PokemonAPI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
+      title: 'Pokemon API',
       debugShowCheckedModeBanner: false,
-      title: 'Poke API',
       theme: CupertinoThemeData(
-        primaryColor: Colors.pink,
+        primaryColor: CupertinoColors.systemPink,
       ),
       home: HomePage(),
     );
